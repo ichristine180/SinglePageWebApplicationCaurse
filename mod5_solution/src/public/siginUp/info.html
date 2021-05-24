@@ -1,0 +1,19 @@
+<h3 ng-if="ctrl.noInfo"> Not Signed Up <a ui-sref="siginUp">Sign up Now!</a></h3>
+<div class="row" ng-if="!ctrl.noInfo" style="margin-left: auto;margin-right: auto;">
+    <div class="col">
+        First Name: {{ctrl.info.firstName}}<br>
+        Last Name: {{ctrl.info.lastName}}<br>
+        Phone Number: {{ctrl.info.phoneNumber}}<br>
+        Email:  {{ctrl.info.email}}
+    </div>
+    <div class="card col" style="width: 18rem;">
+        <img class="card-img-top"
+            ng-src="https://ichristine-mod5-solution.herokuapp.com/images/{{ctrl.info.favorateDish.short_name}}.jpg"
+            alt="{{ctrl.info.favorateDish.name}}">
+        <div class="card-body">
+            <h6 class="card-text">{{ctrl.info.favorateDish.name}}</h6>
+            <p class="card-text">{{ctrl.info.favorateDish.description}}</p>
+        </div>
+    </div>
+   
+</div>

@@ -16,7 +16,7 @@
       })
       .state("info", {
         url: "/info",
-        template: "src/public/siginUp/info.html",
+        templateUrl: "src/public/siginUp/info.html",
         controller: "InfoController as ctrl",
         resolve: {
           info: ["SignUpService",

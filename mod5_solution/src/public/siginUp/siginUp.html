@@ -16,13 +16,20 @@
                 lastname is required
             </span>
     <br>
+
+            <input type="email" name="email" placeholder="enter a email" class="form-control" required
+                ng-model="ctrl.email">
+            <span ng-if="regForm.email.$invalid && regForm.email.$touched">
+               valid email is required (example@gmail.com)
+            </span>
+            <br>
             <input type="text" name="phone" placeholder="Phone ###-###-####" ng-model="ctrl.phone" class="form-control"
                 pattern="(\d{3})-(\d{3})-(\d{4})">
             <span ng-if="regForm.phone.$invalid && regForm.phone.$touched">
                 Phone must be in the format ###-###-####.
             </span>
             <br>
-    <input type="text" placeholder="enter a favorite dish" class="form-control" required
+    <input type="text" placeholder="enter a menu number  ex (A1)" class="form-control" required
         ng-model="ctrl.shortName">
     <span ng-if="ctrl.exit">No such menu number exists</span>
     <br>

@@ -20,6 +20,7 @@
             lastName: ctrl.lastName,
             phoneNumber: ctrl.phone,
             favorateDish: response.data,
+            email: ctrl.email
           });
           ctrl.saved = true;
         }
@@ -29,7 +30,10 @@
 
   function InfoController(info) {
     var ctrl = this;
-
-    console.log(info)
+    if (info === undefined) {
+      ctrl.noInfo = true;
+    } else {
+      ctrl.info = info;
+    }
   }
 })();
